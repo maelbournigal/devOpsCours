@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'ssh -o StrictHostKeyChecking=no mbournigal@192.168.213.128 ls /var/www'
+                sh 'ssh -o StrictHostKeyChecking=no mbournigal@192.168.213.128'
             }
         }
         stage('Test') {
