@@ -1,6 +1,6 @@
 pipeline {
     agent any
-
+   
     stages {
         stage('Build') {
             steps {
@@ -14,7 +14,9 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploy 123456789....'
+                echo 'Deploy ....'
+                sh 'ssh mbournigal@192.168.213.128 mkdir -p /home/mbournigal/temp_deploy'
+                sh 'scp -r dist mbournigal@192.168.213.128:/home/mbournigal/temp_deploy'
             }
         }
     }
