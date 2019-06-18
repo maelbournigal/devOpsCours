@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                sh 'ssh mbournigal@192.168.213.128 ls /var/www'
             }
         }
         stage('Test') {
