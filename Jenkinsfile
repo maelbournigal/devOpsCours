@@ -7,7 +7,6 @@ pipeline {
                 echo 'Building..'
                 npm install
                 node ./server.js
-                sh 'ssh mbournigal@192.168.213.128 ls /var/www'
             }
         }
         stage('Test') {
